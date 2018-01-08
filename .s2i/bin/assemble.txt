@@ -1,0 +1,4 @@
+
+ADD ./service/ /ml/service/
+RUN cd /ml/service
+WORKDIR "/ml/service"
