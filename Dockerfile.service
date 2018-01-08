@@ -1,6 +1,7 @@
 FROM aishwaryashinde/tensorflow:latest
 
 ADD ./service/ /ml/service/
+RUN pip install tensorflow
 RUN cd /ml/service
 WORKDIR "/ml/service"
 RUN chmod 777 /ml/service
