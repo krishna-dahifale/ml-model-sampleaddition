@@ -1,0 +1,8 @@
+FROM aishwaryashinde/tensorflow:latest
+
+ADD ./service/ /ml/service/
+RUN cd /ml/service
+WORKDIR "/ml/service"
+RUN chmod 777 /ml/service
+EXPOSE 5000
+CMD ["python3", "flask_app.py"]
